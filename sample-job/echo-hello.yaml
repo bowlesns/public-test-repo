@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: hello-moto
+spec:
+  template:
+    spec:
+      containers:
+      - name: hello-moto
+        image: ubuntu
+        command: ["echo",  "This job completed"]
+      restartPolicy: Never
+  backoffLimit: 4
