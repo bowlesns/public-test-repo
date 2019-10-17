@@ -1,12 +1,12 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: hello-moto
+  name: hello-moto-err
 spec:
   template:
     spec:
       containers:
-      - name: hello-moto
+      - name: hello-moto-err
         image: ubuntu
         command: ["echo",  "syntaxError]
       restartPolicy: Never
